@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
         }
       )
       .catch((param: any) => {
-        console.log(param)
       })
   }
 

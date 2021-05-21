@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from './../ofertas.service';
 import { Oferta } from './../shared/oferta.model';
+// import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-oferta',
@@ -26,6 +27,29 @@ export class OfertaComponent implements OnInit {
     this.ofertasService.getOfertaPorId(this.route.snapshot.params['id']).then((oferta: Oferta) => {
       this.oferta = oferta
     })
+
+    // this.route.params.subscribe(
+    //   (parametro: any) => { console.log(parametro) },
+    //   (erro: any) => { console.log(erro) },
+    //   () => console.log('Processamento classificado como concluído!')
+    // )
+
+    // // observable (observável)
+    // let meuObservableTeste = new Observable((observer: Observer<number>) => {
+    //   observer.next(1)
+    //   observer.next(2)
+    //   // observer.error('Algum erro foi encontrado na stream de eventos')
+    //   observer.complete()
+    // })
+
+    // // observable (observador)
+    // meuObservableTeste.subscribe(
+    //   (resultado: any) => console.log(resultado + 10),
+    //   (erro: string) => console.log(erro),
+    //   () => console.log('Stream de eventos foi finalizada')
+
+    // )
+
   }
 
 }
