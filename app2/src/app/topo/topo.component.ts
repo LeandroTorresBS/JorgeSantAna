@@ -13,7 +13,6 @@ import { catchError, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/
 export class TopoComponent implements OnInit {
 
   public ofertas: Observable<Oferta[]>
-  public ofertas2: Oferta[]
   private subjectPesquisa: Subject<string> = new Subject<string>()
 
   constructor(private ofertasService: OfertasService) { }
@@ -32,14 +31,9 @@ export class TopoComponent implements OnInit {
         return this.ofertasService.pesquisaOfertas(termo)
       }))
       .pipe(catchError((err: any) => {
-        console.log(err)
+        // console.log(err)
         return of<Oferta[]>([])
       }))
-
-    this.ofertas.subscribe((ofertas: Oferta[]) => {
-      //console.log(ofertas)
-      this.ofertas2 = ofertas
-    })
   }
 
   public pesquisa(termoDaBusca: string): void {
@@ -53,8 +47,10 @@ export class TopoComponent implements OnInit {
     //   (erro: any) => console.log('Erro status', erro.status),
     //   () => console.log('Fluxo de eventos completo!')
     // )
+  }
 
-
+  public limpaPesquisa(): void {
+    this.subjectPesquisa.next('')
   }
 
 }
