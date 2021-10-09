@@ -192,6 +192,65 @@
       "complemento": "",
       "formaPagamento": "debito",
       "id": 1
+    },
+    {
+      "endereco": "Rua Maria das Flores",
+      "numero": "155",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 2
+    },
+    {
+      "endereco": "Rua Teste",
+      "numero": "101",
+      "complemento": null,
+      "formaPagamento": "debito",
+      "id": 3
+    },
+    {
+      "endereco": "adsa",
+      "numero": "22",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 4
+    },
+    {
+      "endereco": "Estrada",
+      "numero": "11",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "endereco": "qweqw",
+      "numero": "21",
+      "complemento": null,
+      "formaPagamento": "debito",
+      "itens": [
+        {
+          "id": 3,
+          "img": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "titulo": "Pizzas Grandes",
+          "descricao_oferta": "Pizza Grande, Mussarela, Marguerita ou outras!",
+          "valor": 21.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 6
     }
   ]
 }

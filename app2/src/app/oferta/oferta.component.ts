@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { OfertasService } from './../ofertas.service';
+import { CarrinhoService } from '../carrinho.service';
+
 import { Oferta } from './../shared/oferta.model';
 // import { Observable, Observer } from 'rxjs';
 
@@ -16,7 +18,8 @@ export class OfertaComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ofertasService: OfertasService
+    private ofertasService: OfertasService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit(): void {
@@ -53,6 +56,11 @@ export class OfertaComponent implements OnInit {
 
     // )
 
+  }
+
+  public adicionarItemCarrinho(): void {
+    this.carrinhoService.incluirItem(this.oferta);
+    console.log(this.carrinhoService.exibirItens())
   }
 
 }
